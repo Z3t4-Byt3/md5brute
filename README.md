@@ -1,2 +1,2 @@
 # md5brute
-Quebra md5.
+md5brute hash wordlist

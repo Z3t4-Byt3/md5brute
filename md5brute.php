@@ -16,8 +16,8 @@
     $hash = $argv[1];
     $wordlist = file($argv[2]);
     foreach($wordlist as $line){
-		$ok = str_replace("\r", "", $line);
-		$ok = str_replace("\n", "", $line);
+	$ok = str_replace("\r", "", $line);
+	$ok = str_replace("\n", "", $line);
         $encrypt = md5($ok);
         if($quebrar == false) {
             if ($encrypt == $hash){

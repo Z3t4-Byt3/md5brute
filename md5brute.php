@@ -1,6 +1,6 @@
 #!/usr/bin/php -q
 <?php
-#456b7016a916a4b178dd72b947c152b7
+#21232f297a57a5a743894a0e4a801fc3
 /*
     * RizeSec e o bixo
     * Codado por Fyk1ll
@@ -16,7 +16,9 @@
     $hash = $argv[1];
     $wordlist = file($argv[2]);
     foreach($wordlist as $line){
-        $encrypt = md5($line);
+		$ok = str_replace("\r", "", $line);
+		$ok = str_replace("\n", "", $line);
+        $encrypt = md5($ok);
         if($quebrar == false) {
             if ($encrypt == $hash){
                 echo "\033[35m========================================================\n";
